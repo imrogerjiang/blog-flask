@@ -2,7 +2,7 @@
 # flask run
 
 from app import app
-from .posts import load_recent
+from .load_json import load_recent
 from flask import render_template
 from flask import Markup
 
