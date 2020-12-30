@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/contact.css') }}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <article>
+        <h2>Contact information</h2>
+        <br>
+        <p>
+            If you want to get in contact, here are some links:
+        </p>
+        <br>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/roger-jiang/">LinkedIn</a></li>
+            <li><a href="https://github.com/imrogerjiang/">GitHub</a></li>
+            <li><a href="https://twitter.com/imrogerjiang">Twitter</a></li>
+            <li><a href="mailto:imrogerjiang@gmail.com">Email</a></li>
+        </ul>
+
+    </article>
+</main>
+{% endblock %}

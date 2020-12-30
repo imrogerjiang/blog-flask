@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/default.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}">
+
+    <style>
+        /* Fonts */
+        @font-face{
+            font-family: Gilroy;
+            font-weight: 100;
+            src:url("{{ url_for('static', filename='assets/fonts/Gilroy-Thin.ttf') }}")  format("truetype");
+            
+        }
+        @font-face{
+            font-family: Gilroy;
+            font-weight: 300;
+            src:url("{{ url_for('static', filename='assets/fonts/Gilroy-UltraLight.ttf') }}")  format("truetype");
+            
+        }
+        @font-face{
+            font-family: Gilroy;
+            font-weight: 300;
+            src:url("{{ url_for('static', filename='assets/fonts/Gilroy-Light.ttf') }}")  format("truetype");
+            
+        }
+        @font-face{
+            font-family: Gilroy;
+            font-weight: 400;
+            src:url("{{ url_for('static', filename='assets/fonts/Gilroy-Regular.ttf') }}")  format("truetype");
+            
+        }
+        @font-face{
+            font-family: Gilroy;
+            font-weight: 500;
+            src:url("{{ url_for('static', filename='assets/fonts/Gilroy-Medium.ttf') }}")  format("truetype");
+            
+        }
+        @font-face{
+            font-family: Gilroy;
+            font-weight: 600;
+            src:url("{{ url_for('static', filename='assets/fonts/Gilroy-SemiBold.ttf') }}")  format("truetype");
+            
+        }
+        @font-face{
+            font-family: Gilroy;
+            font-weight: 700;
+            src:url("{{ url_for('static', filename='assets/fonts/Gilroy-Bold.ttf') }}")  format("truetype");
+        }
+
+        @font-face{
+            font-family: Gilroy;
+            font-weight: 800;
+            src:url("{{ url_for('static', filename='assets/fonts/Gilroy-Heavy.ttf') }}")  format("truetype");
+        }
+    </style>
+    {% block style %}{% endblock %}
+</head>
+
+<body>
+    <header>
+        <h1 id="blog-title">
+            Im Roger
+        </h1>
+        <div class="navigation">
+            <ul>
+                <li><a href= "{{ url_for('blog') }}">Blog</a></li>
+                <li><a href= "{{ url_for('portfolio') }}">Portfolio</a></li>
+                <li><a href= "{{ url_for('about') }}">About</a></li>
+                <li><a href= "{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </div>
+        <div class="navigation-divider"></div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+</body>
+
+<footer>
+    <div class="social-media">
+        <ul>
+            <!-- TODO LinkedIn logo slightly too large -->
+            <li><a href="https://www.linkedin.com/in/roger-jiang/">
+                <img src="{{ url_for('static', filename='assets/images/linkedin-100.png') }}" alt="Linkedin Link">
+            </a></li>
+            <li><a href="https://github.com/imrogerjiang/">
+                <img src="{{ url_for('static', filename='assets/images/github-144.png') }}" alt="Github Link">
+            </a></li>
+            <li><a href="https://twitter.com/imrogerjiang">
+                <img src="{{ url_for('static', filename='assets/images/twitter-100.png') }}" alt="Twitter Link">
+            </a></li>
+            <li><a href="mailto:imrogerjiang@gmail.com">
+                <img src="{{ url_for('static', filename='assets/images/mail-100.png') }}" alt="Email Address">
+            </a></li>
+        </ul>
+    </div>
+    <p id="signature">Created by Roger with Flask - 2020</p>
+</footer>

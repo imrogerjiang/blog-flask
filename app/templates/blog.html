@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/blog.css') }}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <article>
+
+        {% for post in posts %}
+        <div class="post">
+            <h2>{{ post.title }}</h2>
+            <p class="date">{{ blog_date(post.date) }}</p>
+            
+            {{ post.body }}
+        </div>
+        {% endfor %}
+        
+    </article>
+</main>
+{% endblock %}
