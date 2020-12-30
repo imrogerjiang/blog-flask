@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/portfolio.css') }}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <article>
+        {% for sample in samples %}
+        <div class="sample">
+            <h2>{{ sample.title }}</h2>
+            <p>{{ sample.body }}</p>
+            <img src="{{ url_for('static', filename='assets/portfolio/images/') }}{{ sample.img_name}}">
+        </div>
+        {% endfor %}
+    </article>
+</main>
+{% endblock %}
