@@ -5,10 +5,6 @@ header{
 header h1#blog-title{
     margin: 20px;
 }
-header h1#blog-title:hover{
-    color:var(--chrome-yellow);
-    margin: 20px;
-}
 header div.navigation{
     width: 800px;
     margin: auto;
