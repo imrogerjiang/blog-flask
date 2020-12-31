@@ -4,9 +4,6 @@
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/default.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}">
-
     <style>
         /* Fonts */
         @font-face{
@@ -56,7 +53,21 @@
             font-weight: 800;
             src:url("{{ url_for('static', filename='assets/fonts/Gilroy-Heavy.ttf') }}")  format("truetype");
         }
+
+        :root{
+            --clownfish-white: #FCFCFC;
+            --clownfish-grey: #E6E7E9;
+            --warm-light-grey: #faf9f9;
+            --light-accent: #c7c3ba;
+            --warm-dark-grey: #3f3c36;
+            --clownfish-black: #0C0C0C;
+            --chrome-yellow:#F8A800;
+            --tangerine:#F88101;
+            --mango-tango: #E17000;
+        }
     </style>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/default.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/base.css') }}">
     {% block style %}{% endblock %}
 </head>
 
