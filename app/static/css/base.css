@@ -144,14 +144,14 @@ b{
 }
 a{
     font-weight: 400;
-    color:var(--mango-tango);
+    color:var(--chrome-yellow);
     text-decoration: none;
 }
 a:hover{
     text-decoration: underline;
 }
 a:visited{
-    color:var(--chrome-yellow);
+    color:var(--mango-tango);
 }
 li{
     font: 300 18px Gilroy;
