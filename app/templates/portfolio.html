@@ -11,11 +11,11 @@
 
         <div class="sample">
             <div class="text-container">
-                <a href="{{ sample.href }}"><h2>{{ sample.title }}</h2></a>
+                <a href="{{ sample.href }}" target="_blank"><h2>{{ sample.title }}</h2></a>
                 <p class="date">{{ blog_date(sample.date) }}</p>
                 <p>{{ sample.body }}</p>
             </div>
-            <a href="{{ sample.href }}">
+            <a href="{{ sample.href }}" target="_blank">
                 <img class="sample" src="{{ url_for('static', filename='assets/portfolio/images/') }}{{ sample.img_name}}">
             </a>
         </div>
