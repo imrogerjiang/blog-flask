@@ -8,10 +8,16 @@
 <main>
     <article>
         {% for sample in samples %}
+
         <div class="sample">
-            <h2>{{ sample.title }}</h2>
-            <p>{{ sample.body }}</p>
-            <img src="{{ url_for('static', filename='assets/portfolio/images/') }}{{ sample.img_name}}">
+            <div class="text-container">
+                <a href="{{ sample.href }}"><h2>{{ sample.title }}</h2></a>
+                <p class="date">{{ blog_date(sample.date) }}</p>
+                <p>{{ sample.body }}</p>
+            </div>
+            <a href="{{ sample.href }}">
+                <img class="sample" src="{{ url_for('static', filename='assets/portfolio/images/') }}{{ sample.img_name}}">
+            </a>
         </div>
         {% endfor %}
     </article>
