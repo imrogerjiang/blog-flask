@@ -1,6 +1,3 @@
-# export FLASK_APP=blog.py
-# flask run
-
 from app import app
 from datetime import date
 from .load_json import Assets
@@ -27,7 +24,7 @@ portfolio_samples.load_asset(processing=portfolio_processing)
 @app.route('/')
 @app.route('/index')
 def index():
-    return "Hello, World!"
+    return render_template("blog.html" ,title="Blog", posts=posts.load_recent(10))
 
 
 # Converting date from datetime to string
